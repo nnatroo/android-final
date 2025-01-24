@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "575771474909",
+    "project_id": "natroshvili-hm3",
+    "storage_bucket": "natroshvili-hm3.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:575771474909:android:d0f14ba061fff823069434",
+        "android_client_info": {
+          "package_name": "com.example.natroshvili_hm3"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAfMse5d1CuMyH5Agjj0_q9TGDsjDKKQEQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
