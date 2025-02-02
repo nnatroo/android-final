@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical"
+    android:weightSum="5"
+    tools:context=".ProfileFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imageViewPicture"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:src="@drawable/profile_picture"
+            app:civ_border_color="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/editTextName"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="24dp"
+            android:background="@drawable/edit_text_background"
+            android:backgroundTint="@color/white"
+            android:backgroundTintMode="add"
+            android:drawableStart="@drawable/ic_baseline_person_24"
+            android:drawablePadding="4dp"
+            android:drawableTint="@color/colorButton"
+            android:fontFamily="@font/segoe_ui_regular"
+            android:hint="Type your name"
+            android:inputType="text"
+            android:paddingStart="5dp"
+            android:paddingEnd="15dp"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageViewPicture"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/editTextBio"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/edit_text_background"
+            android:backgroundTint="@color/white"
+            android:backgroundTintMode="add"
+            android:drawableStart="@drawable/ic_baseline_notes_24"
+            android:drawablePadding="4dp"
+            android:drawableTint="@color/colorButton"
+            android:fontFamily="@font/segoe_ui_regular"
+            android:hint="About me"
+            android:inputType="text"
+            android:paddingStart="5dp"
+            android:paddingEnd="15dp"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@+id/editTextName"
+            app:layout_constraintStart_toStartOf="@+id/editTextName"
+            app:layout_constraintTop_toBottomOf="@+id/editTextName" />
+
+        <TextView
+            android:id="@+id/textViewMail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:drawableStart="@drawable/ic_baseline_mail_outline_24"
+            android:drawablePadding="5dp"
+            android:drawableTint="@color/colorButtonText"
+            android:fontFamily="@font/segoe_ui_regular"
+            android:gravity="center"
+            android:text="current.user.1@gmail.com"
+            android:textColor="@color/colorButtonText"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/imageViewPicture"
+            app:layout_constraintTop_toBottomOf="@+id/imageViewPicture" />
+
+        <TextView
+            android:id="@+id/textViewChangePassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:drawablePadding="5dp"
+            android:fontFamily="@font/segoe_ui_regular"
+            android:gravity="center"
+            android:text="@string/change_password"
+            android:textColor="@color/colorButtonText"
+            android:textSize="18sp"
+            app:drawableStartCompat="@drawable/ic_baseline_lock_24"
+            app:drawableTint="@color/colorButtonText"
+            app:layout_constraintStart_toStartOf="@+id/textViewMail"
+            app:layout_constraintTop_toBottomOf="@+id/textViewMail" />
+
+        <Button
+            android:id="@+id/buttonSave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:background="@drawable/button_background"
+            android:backgroundTint="@color/white"
+            android:fontFamily="@font/seg_ui_semibold"
+            android:text="@string/save"
+            android:textAllCaps="false"
+            android:textColor="@color/colorButtonText"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@+id/editTextBio"
+            app:layout_constraintTop_toBottomOf="@+id/editTextBio" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:background="@drawable/card_background">
+
+        <EditText
+            android:id="@+id/editTextTweet"
+            android:layout_width="match_parent"
+            android:layout_height="230dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="35dp"
+            android:layout_marginEnd="24dp"
+            android:background="@drawable/edit_text_background"
+            android:fontFamily="@font/segoe_ui_regular"
+            android:gravity="top|left"
+            android:hint="Tweet now"
+            android:paddingStart="20dp"
+            android:paddingTop="20dp"
+            android:paddingEnd="15dp"
+            android:paddingBottom="20dp"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/buttonTweet"
+            android:layout_width="120dp"
+            android:layout_height="52dp"
+            android:layout_marginTop="30dp"
+            android:layout_weight="2"
+            android:background="@drawable/button_background"
+            android:fontFamily="@font/seg_ui_semibold"
+            android:text="Tweet"
+            android:textAllCaps="false"
+            android:textColor="@color/colorButtonText"
+            android:textSize="16dp"
+            app:layout_constraintStart_toStartOf="@+id/editTextTweet"
+            app:layout_constraintTop_toBottomOf="@+id/editTextTweet" />
+
+        <Button
+            android:id="@+id/signOut"
+            android:layout_width="120dp"
+            android:layout_height="52dp"
+            android:layout_marginTop="30dp"
+            android:layout_weight="2"
+            android:background="@drawable/button_background"
+            android:backgroundTint="@color/colorTextPrimary"
+            android:fontFamily="@font/seg_ui_semibold"
+            android:text="Sign Out"
+            android:textAllCaps="false"
+            android:textColor="@color/colorButtonText"
+            android:textSize="16dp"
+            app:layout_constraintEnd_toEndOf="@+id/editTextTweet"
+            app:layout_constraintTop_toBottomOf="@+id/editTextTweet" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

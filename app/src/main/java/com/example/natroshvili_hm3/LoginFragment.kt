@@ -14,7 +14,6 @@ import androidx.navigation.fragment.findNavController
 class LoginFragment : Fragment(R.layout.fragment_login) {
     private lateinit var auth: FirebaseAuth
 
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -24,6 +23,7 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
         val etPassword = view.findViewById<EditText>(R.id.etPassword)
         val btnLogin = view.findViewById<Button>(R.id.btnLogin)
         val btnGoToRegister = view.findViewById<TextView>(R.id.btnGoToRegister)
+        val btnForgotPassword = view.findViewById<TextView>(R.id.buttonReset)
 
         btnLogin.setOnClickListener {
             val email = etEmail.text.toString()
@@ -53,6 +53,10 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
 
         btnGoToRegister.setOnClickListener {
             findNavController().navigate(R.id.action_loginFragment_to_registerFragment)
+        }
+
+        btnForgotPassword.setOnClickListener(){
+            findNavController().navigate(R.id.action_loginFragment_to_forgotPasswordFragment)
         }
     }
 }
